@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>CalCulator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 350px;
+        margin: 40px auto;
+        background-color: teal;
+      }
+      form {
+        width: 250px;
+        background: #ddd;
+        padding: 30px 15px 15px 15px;
+        box-shadow: 5px 9px 9px -1px rgba(0, 0, 0, 0.6);
+        border-radius: 30px 30px 10px 10px;
+        border: 5px solid rgb(150, 150, 150);
+      }
+      input[type="text"] {
+        width: 100%;
+        font-size: 36px;
+        padding: 5px 5px;
+        box-sizing: border-box;
+        text-align: right;
+        font-family: "Macondo Swash Caps", cursive;
+      }
+      input[type="button"] {
+        width: 55px;
+        height: 60px;
+        background: rgb(68, 68, 68);
+        color: white;
+        margin-bottom: 5px;
+        font-size: 30px;
+        margin-left: 2px;
+      }
+      hr {
+        margin: 15px 15px;
+      }
+      .div1 {
+        text-align: center;
+      }
+      h3 {
+        background: black;
+        color: white;
+        font-size: 30px;
+        display: inline-block;
+        border-radius: 30px;
+      }
+      input[type="button"]:hover {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="div1">
+        <form action="" name="Calculator">
+          <h3>Calculator</h3>
+          <input type="text" name="screen" disabled />
+          <hr />
+          <input
+            type="button"
+            value="&radic;"
+            onclick="Calculator.screen.value= Math.sqrt(Calculator.screen.value)"
+          />
+          <input
+            type="button"
+            value="CE"
+            onclick="Calculator.screen.value=''"
+          />
+          <input type="button" value="C" onclick="Calculator.screen.value=''" />
+          <input
+            type="button"
+            value="&larr;"
+            onclick="Calculator.screen.value = Calculator.screen.value.slice(0,-1)"
+          />
+          <br />
+          <input
+            type="button"
+            value="9"
+            onclick="Calculator.screen.value += '9'"
+          />
+          <input
+            type="button"
+            value="8"
+            onclick="Calculator.screen.value += '8'"
+          />
+          <input
+            type="button"
+            value="7"
+            onclick="Calculator.screen.value += '7'"
+          />
+          <input
+            type="button"
+            value="+"
+            onclick="Calculator.screen.value += '+'"
+          />
+          <br />
+          <input
+            type="button"
+            value="6"
+            onclick="Calculator.screen.value += '6'"
+          />
+          <input
+            type="button"
+            value="5"
+            onclick="Calculator.screen.value += '5'"
+          />
+          <input
+            type="button"
+            value="4"
+            onclick="Calculator.screen.value += '4'"
+          />
+          <input
+            type="button"
+            value="-"
+            onclick="Calculator.screen.value += '-'"
+          />
+          <br />
+          <input
+            type="button"
+            value="3"
+            onclick="Calculator.screen.value += '3'"
+          />
+          <input
+            type="button"
+            value="2"
+            onclick="Calculator.screen.value += '2'"
+          />
+          <input
+            type="button"
+            value="1"
+            onclick="Calculator.screen.value += '1'"
+          />
+          <input
+            type="button"
+            value="*"
+            onclick="Calculator.screen.value += '*'"
+          />
+          <br />
+          <input
+            type="button"
+            value="0"
+            onclick="Calculator.screen.value += '0'"
+          />
+          <input
+            type="button"
+            value="."
+            onclick="Calculator.screen.value += '.'"
+          />
+          <input
+            type="button"
+            value="="
+            onclick=" Calculator.screen.value=eval(Calculator.screen.value)"
+          />
+          <input
+            type="button"
+            value="/"
+            onclick="Calculator.screen.value += '/'"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
